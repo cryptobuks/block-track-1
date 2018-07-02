@@ -26,22 +26,6 @@
                 "type": "ed25519",
                 "data": "8C7E512BBF8FB92AF0CFDF56EA27ADF5AE13AB6DC76FCEB57AACE80ACEAD0D27"
             }
-        },
-        {
-            "name": "validator3",
-            "power": 10,
-            "pub_key": {
-                "type": "ed25519",
-                "data": "73D46ECACBFE9DE59D73B393C937CCAA4F60FAFDCAB66B9EF43EF9B08EE772C3"
-            }
-        },
-        {
-            "name": "validator4",
-            "power": 10,
-            "pub_key": {
-                "type": "ed25519",
-                "data": "1D7DBE8F00B93E487363AB136A235D36E4094F595AF62AE90A59A25090605141"
-            }
         }
     ]
 }
