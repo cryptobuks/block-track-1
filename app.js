@@ -1,6 +1,7 @@
 const lotion = require('lotion')
 
 let app = lotion({
+    logTendermint: true,
     devMode: false,
     genesis: './genesis.json',
     keys: 'priv_validator.json',
