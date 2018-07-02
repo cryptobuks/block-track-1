@@ -1,5 +1,6 @@
 const lotion = require('lotion')
 const peers = require('./peers.js')
+const genesis = require.resolve('./genesis.json');
 
 let app = lotion({
     // logTendermint: true,
