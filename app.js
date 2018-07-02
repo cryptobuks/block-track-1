@@ -1,9 +1,10 @@
 const lotion = require('lotion')
+let genesis = require.resolve('./genesis.json')
 
 let app = lotion({
     logTendermint: true,
     devMode: false,
-    genesis: './genesis.json',
+    genesis: genesis,
     keys: 'priv_validator.json',
     initialState: {
         items: {},
