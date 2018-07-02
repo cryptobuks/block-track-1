@@ -1,0 +1,47 @@
+{
+    "app_hash": "6ea06bd08bf3571f76f6042324e2106a194f51db99d618f506efa3b23f8b33e0",
+    "chain_id": "test-chain-XJGF2z",
+    "genesis_time": "0001-01-01T00:00:00Z",
+    "validators": [
+        {
+            "name": "validator0",
+            "power": 10,
+            "pub_key": {
+                "type": "ed25519",
+                "data": "00AB326CBD54D7A55EDBC42CCF07EAF6E211C84FEEADCAE1E5A64F7025E007CD"
+            }
+        },
+        {
+            "name": "validator1",
+            "power": 10,
+            "pub_key": {
+                "type": "ed25519",
+                "data": "2536512F897E0AF2C35ACE26166CA48D369995781EEA894D769BFADFC7D9C467"
+            }
+        },
+        {
+            "name": "validator2",
+            "power": 10,
+            "pub_key": {
+                "type": "ed25519",
+                "data": "8C7E512BBF8FB92AF0CFDF56EA27ADF5AE13AB6DC76FCEB57AACE80ACEAD0D27"
+            }
+        },
+        {
+            "name": "validator3",
+            "power": 10,
+            "pub_key": {
+                "type": "ed25519",
+                "data": "73D46ECACBFE9DE59D73B393C937CCAA4F60FAFDCAB66B9EF43EF9B08EE772C3"
+            }
+        },
+        {
+            "name": "validator4",
+            "power": 10,
+            "pub_key": {
+                "type": "ed25519",
+                "data": "1D7DBE8F00B93E487363AB136A235D36E4094F595AF62AE90A59A25090605141"
+            }
+        }
+    ]
+}

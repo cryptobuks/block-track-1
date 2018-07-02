@@ -1,0 +1,17 @@
+{
+  "name": "block-track",
+  "version": "1.0.0",
+  "description": "A blockchain based inventory tracking app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "blocktrack": "./app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lotion": "^0.1.18"
+  }
+}

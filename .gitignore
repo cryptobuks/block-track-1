@@ -1,3 +1,6 @@
+# Project Specific
+priv_validator.json
+
 # Logs
 logs
 *.log
