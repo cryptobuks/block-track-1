@@ -6,7 +6,7 @@ let app = lotion({
     devMode: false,
     genesis: genesis,
     keys: 'priv_validator.json',
-    peers: ['178.128.102.116', '178.128.102.117', '178.128.220.228'],
+    peers: ['119.75.40.146:26656', '178.128.102.116:26656', '178.128.102.117:26656', '178.128.220.228:26656'],
     initialState: {
         items: {},
         users: {}
