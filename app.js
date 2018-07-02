@@ -6,6 +6,7 @@ let app = lotion({
     devMode: false,
     genesis: genesis,
     keys: 'priv_validator.json',
+    peers: ['178.128.102.116', '178.128.102.117', '178.128.220.228'],
     initialState: {
         items: {},
         users: {}
@@ -43,6 +44,7 @@ app.use((state, tx) => {
 
 app.listen(3000).then(genesis => {
     console.log('BlockTrack is tracking!')
+    console.log(genesis)
 })
 
 // https://stackoverflow.com/questions/42736031/remove-empty-objects-from-an-object
