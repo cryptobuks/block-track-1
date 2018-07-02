@@ -1,17 +1,15 @@
 const lotion = require('lotion')
-const genesis = require.resolve('./genesis.json')
-const shea = require('shea')
 const peers = require('./peers.js')
 
 let app = lotion({
-    logTendermint: true,
-    devMode: false,
-    genesis: genesis,
+    // logTendermint: true,
+    devMode: true,
+    // genesis: genesis,
     lotionPort: 3000,
     p2pPort: 46656,
     tendermintPort: 46657,
-    keys: 'priv_validator.json',
-    peers: peers,
+    // keys: 'priv_validator.json',
+    // peers: peers,
     initialState: {
         items: {},
         users: {}
@@ -46,9 +44,6 @@ app.use((state, tx) => {
         clearEmpties(state)
     }
 })
-
-// 1 Setup frontend
-app.use(shea('public/'))
 
 app.listen(3000).then(genesis => {
     console.log('BlockTrack is tracking!')
