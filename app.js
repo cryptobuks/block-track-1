@@ -5,8 +5,11 @@ let app = lotion({
     logTendermint: true,
     devMode: false,
     genesis: genesis,
+    lotionPort: 3000,
+    p2pPort: 46656,
+    tendermintPort: 46657,
     keys: 'priv_validator.json',
-    // peers: ['119.75.40.146:26656', '178.128.102.116:26656', '178.128.102.117:26656', '178.128.220.228:26656'],
+    peers: ['119.75.40.146:46656', '178.128.102.116:46656', '178.128.102.117:46656', '178.128.220.228:46656'],
     initialState: {
         items: {},
         users: {}
