@@ -2,6 +2,10 @@ const lotion = require('lotion')
 const peers = require('./peers.js')
 const genesis = require.resolve('./genesis.json');
 
+// For WebApp
+const express = require('express')
+const client = express()
+
 let app = lotion({
     // logTendermint: true,
     devMode: false,
@@ -49,6 +53,7 @@ app.use((state, tx) => {
 app.listen(3000).then(genesis => {
     console.log('BlockTrack is tracking!')
     console.log(`GCI: ${genesis.GCI}`)
+    startClient()
 })
 
 // https://stackoverflow.com/questions/42736031/remove-empty-objects-from-an-object
@@ -64,4 +69,9 @@ function clearEmpties(o) {
             delete o[k]; // The object had no properties, so delete that property
         }
     }
+}
+
+function startClient() {
+    client.use(express.static('client'))
+    client.listen(3001, () => console.log('Client listening on port 3001!'))
 }
