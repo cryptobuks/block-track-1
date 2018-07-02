@@ -4,9 +4,9 @@
         "type": "ed25519",
         "data": "73D46ECACBFE9DE59D73B393C937CCAA4F60FAFDCAB66B9EF43EF9B08EE772C3"
     },
-    "last_height": 11,
+    "last_height": 0,
     "last_round": 0,
-    "last_step": 3,
+    "last_step": 0,
     "last_signature": {
         "type": "ed25519",
         "data": "04507D7145B67F2359C80396834E847D38ABEC4AB9551669E28E6EE3C1F86421F17BC7B5B0DBB7DD3D10E398F80526F52CE448AF2F578EB16B4E382AA1B3C203"
