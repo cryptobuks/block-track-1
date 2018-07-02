@@ -1,5 +1,7 @@
 const lotion = require('lotion')
-let genesis = require.resolve('./genesis.json')
+const genesis = require.resolve('./genesis.json')
+const shea = require('shea')
+const peers = require('./peers.js')
 
 let app = lotion({
     logTendermint: true,
@@ -9,7 +11,7 @@ let app = lotion({
     p2pPort: 46656,
     tendermintPort: 46657,
     keys: 'priv_validator.json',
-    peers: ['119.75.40.146:46656', '178.128.102.116:46656', '178.128.102.117:46656', '178.128.220.228:46656'],
+    peers: peers,
     initialState: {
         items: {},
         users: {}
@@ -45,9 +47,12 @@ app.use((state, tx) => {
     }
 })
 
+// 1 Setup frontend
+app.use(shea('public/'))
+
 app.listen(3000).then(genesis => {
     console.log('BlockTrack is tracking!')
-    console.log(genesis)
+    console.log(`GCI: ${genesis.GCI}`)
 })
 
 // https://stackoverflow.com/questions/42736031/remove-empty-objects-from-an-object

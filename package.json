@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lotion": "^0.1.18"
+    "lotion": "^0.1.18",
+    "shea": "0.0.13"
   }
 }
