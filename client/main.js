@@ -87,7 +87,7 @@ class BlockTrack extends React.Component {
           <input type="text" value={this.state.userName} onChange={this.handleUserNameChange} />
             </label>
             &nbsp;
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" disabled={!this.state.itemName || !this.state.userName} />
           </form>
         </div>
         <h4>Inventory</h4>
