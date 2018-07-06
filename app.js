@@ -34,7 +34,7 @@ app.use((state, tx) => {
             state.users[prevOwner][tx.item] = state.users[prevOwner][tx.item] || {}
             delete state.users[prevOwner][tx.item]
         }
-        // 4. Add the item to new user 
+        // 4. Add the item to new user
         state.users[tx.user] = state.users[tx.user] || {}
         state.users[tx.user][tx.item] = state.users[tx.user][tx.item] || {}
         state.users[tx.user][tx.item] = true
