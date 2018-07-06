@@ -8,13 +8,13 @@ const client = express()
 
 let app = lotion({
     // logTendermint: true,
-    devMode: true,
-    //genesis: genesis,
+    devMode: false,
+    genesis: genesis,
     lotionPort: 3000,
     p2pPort: 46656,
     tendermintPort: 46657,
-    //keys: 'priv_validator.json',
-    //peers: peers,
+    keys: 'priv_validator.json',
+    peers: peers,
     initialState: {
         items: {},
         users: {}
