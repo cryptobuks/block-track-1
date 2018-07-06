@@ -76,25 +76,30 @@ class BlockTrack extends React.Component {
       <div>
         <div>
           <h1>BlockTrack</h1>
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Item:
-          <input type="text" value={this.state.itemName} onChange={this.handleItemNameChange} />
-            </label>
-            &nbsp;
-            <label>
-              Name:
-          <input type="text" value={this.state.userName} onChange={this.handleUserNameChange} />
-            </label>
-            &nbsp;
-            <input type="submit" value="Submit" disabled={!this.state.itemName || !this.state.userName} />
-          </form>
+          <div className="card" style={{width: 30 + 'rem'}}>
+             <div className="card-body">
+              <form onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                  <label>Item</label>
+                  <input className="form-control" type="text" value={this.state.itemName} onChange={this.handleItemNameChange} />
+                </div>
+                <div className="form-group">
+                  <label>Name</label>
+                  <input className="form-control" type="text" value={this.state.userName} onChange={this.handleUserNameChange} />
+                </div>
+                <button type="submit" className="btn btn-primary btn-block" disabled={!this.state.itemName || !this.state.userName}>Submit</button>
+              </form>
+             </div>
+          </div>
         </div>
-        <h4>Inventory</h4>
-        <div>
-          <ul>
+        <br /><br />
+        <div className="card" style={{width: 30 + 'rem'}}>
+          <div className="card-body">
+            <h5 className="card-title" style={{marginBottom: 0}}>Inventory</h5>
+          </div>
+          <ul className="list-group list-group-flush">
             {Object.keys(items).map(function (key, idx) {
-              return (<li key={idx}>{key} -> {items[key]}</li>)
+              return (<li className="list-group-item" key={idx}>{key} -> {items[key]}</li>)
             })}
           </ul>
         </div>

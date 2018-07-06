@@ -8,13 +8,13 @@ const client = express()
 
 let app = lotion({
     // logTendermint: true,
-    devMode: false,
-    genesis: genesis,
+    devMode: true,
+    //genesis: genesis,
     lotionPort: 3000,
     p2pPort: 46656,
     tendermintPort: 46657,
-    keys: 'priv_validator.json',
-    peers: peers,
+    //keys: 'priv_validator.json',
+    //peers: peers,
     initialState: {
         items: {},
         users: {}
@@ -34,7 +34,7 @@ app.use((state, tx) => {
             state.users[prevOwner][tx.item] = state.users[prevOwner][tx.item] || {}
             delete state.users[prevOwner][tx.item]
         }
-        // 4. Add the item to new user 
+        // 4. Add the item to new user
         state.users[tx.user] = state.users[tx.user] || {}
         state.users[tx.user][tx.item] = state.users[tx.user][tx.item] || {}
         state.users[tx.user][tx.item] = true
