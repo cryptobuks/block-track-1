@@ -6,20 +6,32 @@ const genesis = require.resolve('./genesis.json');
 const express = require('express')
 const client = express()
 
-let app = lotion({
+const dev = process.argv[2] === '--dev' || false
+
+const initialState = {
+    items: {},
+    users: {}
+}
+
+const opts = {
     // logTendermint: true,
     devMode: false,
-    genesis: genesis,
     lotionPort: 3000,
     p2pPort: 46656,
     tendermintPort: 46657,
-    keys: 'priv_validator.json',
-    peers: peers,
-    initialState: {
-        items: {},
-        users: {}
-    }
-})
+    initialState: initialState
+}
+
+if (dev) {
+    console.log('Running in development mode.')
+    opts.devMode = true
+} else {
+    opts.genesis = genesis
+    opts.keys = 'priv_validator.json'
+    opts.peers = peers
+}
+
+let app = lotion(opts)
 
 app.use((state, tx) => {
     // Validation
@@ -34,7 +46,7 @@ app.use((state, tx) => {
             state.users[prevOwner][tx.item] = state.users[prevOwner][tx.item] || {}
             delete state.users[prevOwner][tx.item]
         }
-        // 4. Add the item to new user
+        // 4. Add the item to new user 
         state.users[tx.user] = state.users[tx.user] || {}
         state.users[tx.user][tx.item] = state.users[tx.user][tx.item] || {}
         state.users[tx.user][tx.item] = true

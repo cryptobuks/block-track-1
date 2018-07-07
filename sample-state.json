@@ -1,0 +1,16 @@
+{
+    "items": {
+        "iPhone": "Don",
+        "charger": "Don",
+        "MacBook": "Mohshin"
+    },
+    "users": {
+        "Don": {
+            "charger": true,
+            "iPhone": true
+        },
+        "Mohshin": {
+            "MacBook": true
+        }
+    }
+}
