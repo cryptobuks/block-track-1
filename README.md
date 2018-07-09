@@ -1,6 +1,6 @@
 # BlockTrack
 
-Blockchain based inventory tracking. Because we need to keep track of our iPhone chargers!
+Blockchain based inventory tracking. Because we need to keep track of our iPhone chargers! A quick blockchain app I created for [AlephSummit2018](http://aleph-labs.com/alephsummit18/index.html).
 
 ## Getting Started
 
